@@ -795,6 +795,30 @@ img {
     display: none;
   }
 
+  .nav.active {
+    display: flex;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .nav.active .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+
+  .nav.active .nav__link {
+    font-size: 1.2rem;
+  }
+
   .mobile-menu-btn {
     display: flex;
   }
