@@ -200,11 +200,13 @@ img {
   transition: var(--transition);
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link--active {
   color: var(--color-primary);
 }
 
-.nav__link:hover::after {
+.nav__link:hover::after,
+.nav__link--active::after {
   width: 100%;
 }
 

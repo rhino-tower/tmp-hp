@@ -10,6 +10,8 @@ export default defineConfig({
             input: {
                 main: 'index.html',
                 contact: 'contact/index.html',
+                privacy: 'privacy/index.html',
+                works: 'works/index.html',
             },
         },
     },
