@@ -38,15 +38,25 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero__bg"></div>
+    <section class="hero" id="top">
+      <div class="hero__bg-slider">
+        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_code.png')"></div>
+        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_team.png')"></div>
+        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_laptop.png')"></div>
+      </div>
+      <div class="hero__overlay"></div>
       <div class="container hero__container">
         <h1 class="hero__title">
-          <span class="hero__title-line">未来を創る</span>
-          <span class="hero__title-line">技術力</span>
+          未来を創る<br class="u-mobile-only">技術力
+          <span class="hero__subtitle">Technology for a better future</span>
         </h1>
-        <p class="hero__subtitle">DXとシステム開発のパートナー</p>
-        <a href="#strength" class="btn btn--primary hero__cta">私たちについて</a>
+        <p class="hero__description">
+          私たちは最先端の技術とデザインで、<br>
+          お客様のビジネスに新たな価値を提供します。
+        </p>
+        <div class="hero__buttons">
+          <a href="works/" class="btn btn--secondary">実績一覧を見る</a>
+        </div>
       </div>
       <div class="scroll-indicator">
         <span>Scroll</span>
