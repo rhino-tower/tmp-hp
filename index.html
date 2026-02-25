@@ -24,7 +24,6 @@
           <li class="nav__item"><a href="#strength" class="nav__link">強み</a></li>
           <li class="nav__item"><a href="works/" class="nav__link">開発事例</a></li>
           <li class="nav__item"><a href="#news" class="nav__link">お知らせ</a></li>
-          <li class="nav__item"><a href="#company" class="nav__link">会社情報</a></li>
         </ul>
       </nav>
       <a href="contact/" class="btn btn--primary header__cta">お問い合わせ</a>
@@ -92,7 +91,7 @@
       <div class="container">
         <h2 class="section-title">開発事例 <span class="section-title__sub">Works</span></h2>
         <div class="works__slider">
-          <div class="work-card">
+          <a href="works/app-dev/" class="work-card">
             <div class="work-card__image">
               <img src="images/app_dev_case.png" alt="WEBアプリケーション開発" class="work-card__img"
                 style="width: 100%; height: 100%; object-fit: cover;">
@@ -101,8 +100,8 @@
               <p class="work-card__category">Web Application</p>
               <h3 class="work-card__title">WEBアプリケーション開発</h3>
             </div>
-          </div>
-          <div class="work-card">
+          </a>
+          <a href="works/website-dev/" class="work-card">
             <div class="work-card__image">
               <img src="images/website_dev_case.png" alt="ホームページ制作、リニューアル" class="work-card__img"
                 style="width: 100%; height: 100%; object-fit: cover;">
@@ -111,8 +110,8 @@
               <p class="work-card__category">Website</p>
               <h3 class="work-card__title">ホームページ制作、リニューアル</h3>
             </div>
-          </div>
-          <div class="work-card">
+          </a>
+          <a href="works/automation/" class="work-card">
             <div class="work-card__image">
               <img src="images/automation_dev_case.png" alt="業務自動化" class="work-card__img"
                 style="width: 100%; height: 100%; object-fit: cover;">
@@ -121,8 +120,8 @@
               <p class="work-card__category">DX / Automation</p>
               <h3 class="work-card__title">業務自動化</h3>
             </div>
-          </div>
-          <div class="work-card">
+          </a>
+          <a href="works/mobile-app/" class="work-card">
             <div class="work-card__image">
               <img src="images/mobile_app_dev_case.png" alt="スマホアプリ開発" class="work-card__img"
                 style="width: 100%; height: 100%; object-fit: cover;">
@@ -131,7 +130,7 @@
               <p class="work-card__category">Mobile App</p>
               <h3 class="work-card__title">スマホアプリ開発</h3>
             </div>
-          </div>
+          </a>
         </div>
         <div class="works__cta-wrapper">
           <a href="works/" class="btn btn--secondary">開発事例一覧を見る</a>
@@ -143,7 +142,11 @@
       <div class="container">
         <h2 class="section-title">お知らせ <span class="section-title__sub">News</span></h2>
         <div class="news__list">
-          <p style="text-align: center; color: #666;">現在、お知らせはありません。</p>
+          <div class="news__item">
+            <time class="news__date" datetime="2026-02-26">2026.02.26</time>
+            <span class="news__category">お知らせ</span>
+            <p class="news__title">ホームページをリニューアルしました。</p>
+          </div>
         </div>
       </div>
     </section>
@@ -164,7 +167,8 @@
         <p class="footer__address">
           〒150-0021<br>
           東京都渋谷区恵比寿西2丁目4番8号<br>
-          ウィンド恵比寿ビル8F
+          ウィンド恵比寿ビル8F<br>
+          代表者: 斉藤 勇貴
         </p>
       </div>
       <div class="footer__links">
@@ -172,7 +176,6 @@
           <li><a href="#strength">強み</a></li>
           <li><a href="#works">開発事例</a></li>
           <li><a href="#news">お知らせ</a></li>
-          <li><a href="#company">会社情報</a></li>
         </ul>
         <ul class="footer__nav">
           <li><a href="privacy/">プライバシーポリシー</a></li>
