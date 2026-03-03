@@ -553,6 +553,76 @@ img {
   z-index: 1;
 }
 
+/* Comparison Table */
+.comparison-wrapper {
+  margin-top: 4rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: var(--spacing-md);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  min-width: 800px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+  border-right: none;
+}
+
+.comparison-table thead th {
+  background-color: #f1f5f9;
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+
+.comparison-table tbody th {
+  text-align: left;
+  background-color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  width: 20%;
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td.highlight {
+  background-color: rgba(0, 86, 179, 0.05);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.comparison-table td .remark {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
 /* Services Section */
 .services {
   background-color: var(--color-bg-alt);
