@@ -21,7 +21,7 @@
       <a href="#" class="logo">TechNova</a>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#strength" class="nav__link">強み</a></li>
+          <li class="nav__item"><a href="#strength" class="nav__link">開発体制</a></li>
           <li class="nav__item"><a href="works/" class="nav__link">開発事例</a></li>
           <li class="nav__item"><a href="#news" class="nav__link">お知らせ</a></li>
         </ul>
@@ -64,28 +64,69 @@
 
     <section id="strength" class="section strength">
       <div class="container">
-        <h2 class="section-title">強み<span class="section-title__sub">Our Strength</span></h2>
-        <div class="strength__grid">
-          <div class="card strength__card">
-            <div class="strength__icon">01</div>
-            <h3 class="strength__title">高品質</h3>
-            <p class="strength__desc">経験豊富なエンジニアによる高品質なコードと、堅牢なアーキテクチャ設計。保守性と拡張性に優れたシステムを提供します。</p>
+        <!-- お客様のご要望に合わせた開発体制 -->
+        <h2 class="section-title" style="margin-bottom: 1rem;">お客様のご要望に合わせた柔軟な開発体制<span
+            class="section-title__sub">Flexible Development</span></h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: var(--color-text-light); line-height: 1.8;">
+          企画、デザイン、開発といったすべての工程を自社内で完結し、密な連携を取ることで、<br class="hidden-mobile">
+          お客様に満足いただける「高品質」かつ「スピーディーな価値提供」を可能にします。<br>
+          TechNovaはお客様の状況に合わせて、必要なフェーズから柔軟に参画・サポートいたします。
+        </p>
+
+        <div class="dev-flow-wrapper" style="margin-top: 0;">
+          <!-- Case 1 -->
+          <div class="dev-flow-card">
+            <h4 class="dev-flow-card__title">ケース1：ゼロから丸ごとお願いしたい（ご相談〜開発・運用）</h4>
+            <div class="dev-flow-steps">
+              <div class="dev-flow-step step-active">ご相談・企画</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">要件定義</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">設計・デザイン</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">開発・テスト</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">運用・保守</div>
+            </div>
+            <p class="dev-flow-desc"><span class="badge">TechNova担当</span> 企画段階からパートナーとして伴走し、ビジネスの立ち上げから運用までフルサポートします。
+            </p>
           </div>
-          <div class="card strength__card">
-            <div class="strength__icon">02</div>
-            <h3 class="strength__title">アジャイル</h3>
-            <p class="strength__desc">素早いデモ作成によってお客様の作りたいプロダクトとの認識齟齬を減らし価値を提供します。</p>
+
+          <!-- Case 2 -->
+          <div class="dev-flow-card">
+            <h4 class="dev-flow-card__title">ケース2：作りたいものはあるが、要件定義からお願いしたい</h4>
+            <div class="dev-flow-steps">
+              <div class="dev-flow-step step-inactive">お客様内で企画</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">要件定義</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">設計・デザイン</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">開発・テスト</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">運用・保守</div>
+            </div>
+            <p class="dev-flow-desc"><span class="badge">TechNova担当</span> お客様のアイデアをシステム要件に落とし込み、最適な設計・開発を行います。</p>
           </div>
-          <div class="card strength__card">
-            <div class="strength__icon">03</div>
-            <h3 class="strength__title">一気通貫のチーム体制</h3>
-            <p class="strength__desc">
-              ビジネスを推進する企画、使いやすさを追求するデザイナー、それを実現するエンジニアが密に連携。上流から下流まで一気通貫で対応することで、ブレのないハイクオリティなプロダクトを提供します。</p>
+
+          <!-- Case 3 -->
+          <div class="dev-flow-card">
+            <h4 class="dev-flow-card__title">ケース3：要件定義は済んでおり、開発からお願いしたい</h4>
+            <div class="dev-flow-steps">
+              <div class="dev-flow-step step-inactive">お客様内で要件定義</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">設計・デザイン</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">開発・テスト</div>
+              <div class="dev-flow-arrow"></div>
+              <div class="dev-flow-step step-active">運用・保守</div>
+            </div>
+            <p class="dev-flow-desc"><span class="badge">TechNova担当</span> 確定した要件をベースに、モダンな技術スタックで高品質・スピーディに開発します。</p>
           </div>
         </div>
 
         <!-- 比較表 -->
-        <div class="comparison-wrapper">
+        <div class="comparison-wrapper" style="margin-top: 5rem;">
           <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">他社との比較</h3>
           <div class="table-responsive">
             <table class="comparison-table">
@@ -255,7 +296,7 @@
       </div>
       <div class="footer__links">
         <ul class="footer__nav">
-          <li><a href="#strength">強み</a></li>
+          <li><a href="#strength">開発体制</a></li>
           <li><a href="#works">開発事例</a></li>
           <li><a href="#news">お知らせ</a></li>
         </ul>
