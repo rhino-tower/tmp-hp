@@ -74,6 +74,24 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
+  // Floating Header on Scroll
+  const header = document.querySelector('.header');
+  const hasHero = document.querySelector('.hero');
+
+  if (!hasHero) {
+    header.classList.add('scrolled');
+  } else {
+    const handleHeaderScroll = () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
+  }
+
   // Scroll to Top Button
   const scrollTopBtn = document.createElement('button');
   scrollTopBtn.className = 'scroll-to-top';
