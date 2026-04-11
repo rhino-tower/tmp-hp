@@ -288,17 +288,38 @@ img {
   flex-direction: column;
   gap: 6px;
   padding: 5px;
+  pointer-events: auto;
 }
 
 .mobile-menu-btn__line {
   width: 24px;
   height: 2px;
   background-color: var(--color-white);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
 .header.scrolled .mobile-menu-btn__line {
   background-color: var(--color-text);
+}
+
+/* ============================================
+   Hero Entrance Animations
+   ============================================ */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 0.8;
+  }
 }
 
 /* Hero Section */
@@ -394,6 +415,7 @@ img {
   margin-bottom: var(--spacing-sm);
   display: flex;
   flex-direction: column;
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
 .hero__subtitle {
@@ -401,6 +423,14 @@ img {
   margin-bottom: var(--spacing-md);
   opacity: 0.9;
   font-weight: 300;
+}
+
+.hero__description {
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both;
+}
+
+.hero__buttons {
+  animation: heroFadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both;
 }
 
 .hero__cta {
@@ -426,7 +456,19 @@ img {
   gap: var(--spacing-xs);
   font-size: 0.8rem;
   letter-spacing: 0.1em;
-  opacity: 0.8;
+  opacity: 0;
+  animation: heroFadeIn 1s ease-out 1.3s forwards;
+}
+
+/* Hero Particle Canvas */
+.hero__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .scroll-indicator__line {
@@ -1116,33 +1158,68 @@ img {
   .nav.active {
     display: flex;
     position: fixed;
-    top: calc(20px + var(--header-height));
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 20px - var(--header-height));
+    height: 100vh;
     background-color: var(--color-white);
     border-radius: 0;
     box-shadow: none;
     backdrop-filter: none;
-    padding: 0;
+    padding-top: calc(20px + var(--header-height) + 2rem);
+    padding-bottom: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 998;
   }
 
   .nav.active .nav__list {
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-lg);
+    gap: 0;
+    width: 100%;
+    padding: 0 var(--spacing-md);
   }
 
   .nav.active .nav__link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-border);
+    position: static;
+  }
+
+  .nav.active .nav__link::after {
+    display: none;
+  }
+
+  .nav.active .nav__link:hover {
+    color: var(--color-primary);
+    background-color: transparent;
   }
 
   .mobile-menu-btn {
     display: flex;
+    z-index: 1001;
+  }
+
+  /* ハンバーガー → × アニメーション */
+  .mobile-menu-btn.active .mobile-menu-btn__line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .mobile-menu-btn.active .mobile-menu-btn__line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .mobile-menu-btn.active .mobile-menu-btn__line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
   }
 
   .hero__title {
