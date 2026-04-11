@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# プライバシーポリシーはインデックス不要
+Disallow: /privacy/
+
+Sitemap: https://teck-nova.jp/sitemap.xml
