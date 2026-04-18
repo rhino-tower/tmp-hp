@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>システム開発・DX推進のご相談｜TeckNova</title>
+  <meta name="description" content="Web・アプリ開発、業務自動化、AI導入を企画から運用まで一気通貫で対応。初回相談・見積もり無料。東京・渋谷のTeckNovaにお任せください。" />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    /* LP固有スタイル */
+    .lp-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .lp-header__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .lp-header__logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.02em;
+    }
+    .lp-header__cta {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 0.55rem 1.4rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .lp-header__cta:hover { background: var(--color-primary-dark); }
+
+    /* Hero */
+    .lp-hero {
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, #0a1628 0%, #0056b3 60%, #00a8e8 100%);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .lp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .lp-hero__eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+    .lp-hero__title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 1.5rem;
+    }
+    .lp-hero__title em {
+      font-style: normal;
+      color: #7dd3fc;
+    }
+    .lp-hero__desc {
+      font-size: 1.05rem;
+      opacity: 0.88;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .lp-hero__cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .lp-btn-primary {
+      background: #fff;
+      color: var(--color-primary);
+      padding: 1rem 2.2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .lp-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+    .lp-btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.6);
+      padding: 1rem 2.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    .lp-btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+    /* 数字実績バー */
+    .lp-stats {
+      background: #f0f6ff;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid #dde8f5;
+    }
+    .lp-stats__inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .lp-stat__num {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+    .lp-stat__num span { font-size: 1.2rem; }
+    .lp-stat__label {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-top: 0.4rem;
+    }
+
+    /* セクション共通 */
+    .lp-section {
+      padding: 5rem 0;
+    }
+    .lp-section--alt { background: var(--color-bg-alt); }
+    .lp-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .lp-section__title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    .lp-section__sub {
+      text-align: center;
+      color: var(--color-text-light);
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* 課題セクション */
+    .lp-pain__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .lp-pain__card {
+      background: #fff;
+      border: 1.5px solid #dde8f5;
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .lp-pain__icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .lp-pain__text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    /* サービスカード */
+    .lp-services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .lp-service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border-top: 4px solid var(--color-primary);
+    }
+    .lp-service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .lp-service-card__icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .lp-service-card__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--color-text);
+    }
+    .lp-service-card__desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+    .lp-service-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+    .lp-tag {
+      background: #e8f0fe;
+      color: var(--color-primary);
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    /* 選ばれる理由 */
+    .lp-reasons__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .lp-reason {
+      text-align: center;
+    }
+    .lp-reason__num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .lp-reason__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .lp-reason__desc {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    /* フロー */
+    .lp-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: center;
+      counter-reset: flow;
+    }
+    .lp-flow__step {
+      flex: 1;
+      min-width: 140px;
+      max-width: 180px;
+      text-align: center;
+      position: relative;
+      padding: 1.5rem 0.75rem;
+    }
+    .lp-flow__step:not(:last-child)::after {
+      content: '▶';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-primary);
+      font-size: 1.1rem;
+      opacity: 0.5;
+    }
+    .lp-flow__num {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.7rem;
+    }
+    .lp-flow__label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.4;
+    }
+    .lp-flow__note {
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+      margin-top: 0.3rem;
+    }
+
+    /* CTA セクション */
+    .lp-cta {
+      background: linear-gradient(135deg, #0056b3 0%, #00a8e8 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: #fff;
+    }
+    .lp-cta__title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .lp-cta__desc {
+      font-size: 1rem;
+      opacity: 0.88;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+    .lp-cta__free {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 0.3rem 1rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .lp-cta__btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--color-primary);
+      padding: 1.1rem 3rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: var(--transition);
+    }
+    .lp-cta__btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
+    .lp-cta__note {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    /* フッター */
+    .lp-footer {
+      background: #111;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 640px) {
+      .lp-stats__inner { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+      .lp-stat__num { font-size: 1.8rem; }
+      .lp-flow__step:not(:last-child)::after { display: none; }
+      .lp-flow__step { min-width: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="lp-header">
+    <div class="lp-header__inner">
+      <a href="/" class="lp-header__logo">TeckNova</a>
+      <a href="/contact/" class="lp-header__cta">無料で相談する</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ヒーロー -->
+    <section class="lp-hero">
+      <div class="lp-container" style="position:relative;">
+        <p class="lp-hero__eyebrow">📞 初回相談・見積もり 完全無料</p>
+        <h1 class="lp-hero__title">
+          <em>システム開発・DX推進</em>を<br>
+          企画から運用まで一気通貫で。
+        </h1>
+        <p class="lp-hero__desc">
+          Web・アプリ開発、業務自動化、AI導入——<br>
+          少数精鋭チームが高品質かつスピーディに<br>
+          お客様のビジネスに価値を届けます。
+        </p>
+        <div class="lp-hero__cta-group">
+          <a href="/contact/" class="lp-btn-primary">無料で相談する →</a>
+          <a href="/works/" class="lp-btn-secondary">開発事例を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実績数字 -->
+    <div class="lp-stats">
+      <div class="lp-stats__inner">
+        <div>
+          <div class="lp-stat__num">50<span>+</span></div>
+          <div class="lp-stat__label">累計開発実績</div>
+        </div>
+        <div>
+          <div class="lp-stat__num">96<span>%</span></div>
+          <div class="lp-stat__label">顧客満足度</div>
+        </div>
+        <div>
+          <div class="lp-stat__num">0<span>円</span></div>
+          <div class="lp-stat__label">初回相談費用</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題 -->
+    <section class="lp-section">
+      <div class="lp-container">
+        <h2 class="lp-section__title">こんなお悩みはありませんか？</h2>
+        <p class="lp-section__sub">多くの企業様から同じご相談をいただいています。</p>
+        <div class="lp-pain__grid">
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">😩</span>
+            <p class="lp-pain__text">システム化したいが、<br>どこに頼めばいいかわからない</p>
+          </div>
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">💸</span>
+            <p class="lp-pain__text">大手SIerに見積もったら<br>予算オーバーだった</p>
+          </div>
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">🐢</span>
+            <p class="lp-pain__text">フリーランスに依頼したら<br>品質・納期が不安定だった</p>
+          </div>
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">📋</span>
+            <p class="lp-pain__text">アイデアはあるが<br>要件定義から一緒にやってほしい</p>
+          </div>
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">🤖</span>
+            <p class="lp-pain__text">AIや業務自動化を導入したいが<br>何から始めればいいかわからない</p>
+          </div>
+          <div class="lp-pain__card">
+            <span class="lp-pain__icon">🔧</span>
+            <p class="lp-pain__text">既存システムが老朽化し<br>保守・拡張が難しくなっている</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- サービス -->
+    <section class="lp-section lp-section--alt">
+      <div class="lp-container">
+        <h2 class="lp-section__title">TeckNovaのサービス</h2>
+        <p class="lp-section__sub">Web・アプリ開発からAI・自動化まで、幅広い開発ニーズに対応します。</p>
+        <div class="lp-services__grid">
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">🌐</div>
+            <div class="lp-service-card__title">WEBアプリ・サービス開発</div>
+            <div class="lp-service-card__desc">SaaS型サービス、マッチングプラットフォーム、業務管理システムなどのWebアプリを設計・開発・運用します。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">React / Vue</span>
+              <span class="lp-tag">Next.js</span>
+              <span class="lp-tag">AWS / GCP</span>
+            </div>
+          </div>
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">📱</div>
+            <div class="lp-service-card__title">スマホアプリ開発</div>
+            <div class="lp-service-card__desc">iOS・Android向けのアプリを開発。Flutter採用でコストを抑えながら高品質なUXを実現します。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">Flutter</span>
+              <span class="lp-tag">React Native</span>
+              <span class="lp-tag">iOS / Android</span>
+            </div>
+          </div>
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">⚡</div>
+            <div class="lp-service-card__title">業務自動化・DX推進</div>
+            <div class="lp-service-card__desc">RPAや自動化ツールを活用し、手作業をゼロに。業務プロセスのデジタル化で生産性を大幅に向上させます。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">RPA</span>
+              <span class="lp-tag">Playwright</span>
+              <span class="lp-tag">Python</span>
+            </div>
+          </div>
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">🤖</div>
+            <div class="lp-service-card__title">AIシステム開発</div>
+            <div class="lp-service-card__desc">ChatGPT等のLLMを活用した社内AIチャット(RAG)、画像解析、自動見積システムなどを開発します。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">OpenAI API</span>
+              <span class="lp-tag">RAG</span>
+              <span class="lp-tag">Claude API</span>
+            </div>
+          </div>
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">🏠</div>
+            <div class="lp-service-card__title">ホームページ制作・リニューアル</div>
+            <div class="lp-service-card__desc">コーポレートサイト、LPなどのホームページ制作・リニューアル。SEOとデザイン品質を両立します。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">Vite / Astro</span>
+              <span class="lp-tag">WordPress</span>
+              <span class="lp-tag">SEO対応</span>
+            </div>
+          </div>
+          <div class="lp-service-card">
+            <div class="lp-service-card__icon">🔄</div>
+            <div class="lp-service-card__title">レガシーシステム刷新</div>
+            <div class="lp-service-card__desc">老朽化した基幹システムをモダンなWebアーキテクチャへ移行。保守性・拡張性を大幅に改善します。</div>
+            <div class="lp-service-card__tags">
+              <span class="lp-tag">マイグレーション</span>
+              <span class="lp-tag">クラウド移行</span>
+              <span class="lp-tag">API化</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section class="lp-section">
+      <div class="lp-container">
+        <h2 class="lp-section__title">TeckNovaが選ばれる3つの理由</h2>
+        <p class="lp-section__sub">大手SIerの品質をスタートアップのスピードで。</p>
+        <div class="lp-reasons__grid">
+          <div class="lp-reason">
+            <div class="lp-reason__num">01</div>
+            <div class="lp-reason__title">企画から運用まで一気通貫</div>
+            <p class="lp-reason__desc">企画・デザイン・開発・運用保守を社内で完結。窓口が一本化されるため認識齟齬がなく、一貫した品質をご提供します。</p>
+          </div>
+          <div class="lp-reason">
+            <div class="lp-reason__num">02</div>
+            <div class="lp-reason__title">少数精鋭によるスピード開発</div>
+            <p class="lp-reason__desc">経験豊富なエンジニアが直接担当。余計な中間管理をなくし、素早いデモ作成・フィードバックサイクルで最速で価値を届けます。</p>
+          </div>
+          <div class="lp-reason">
+            <div class="lp-reason__num">03</div>
+            <div class="lp-reason__title">コストパフォーマンスの高さ</div>
+            <p class="lp-reason__desc">多重下請けを排除し、無駄なマージンをカット。大手並みの品質を適正価格でご提供します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 開発フロー -->
+    <section class="lp-section lp-section--alt">
+      <div class="lp-container">
+        <h2 class="lp-section__title">ご依頼の流れ</h2>
+        <p class="lp-section__sub">お問い合わせからリリースまで、スムーズにサポートします。</p>
+        <div class="lp-flow">
+          <div class="lp-flow__step">
+            <div class="lp-flow__num">1</div>
+            <div class="lp-flow__label">お問い合わせ</div>
+            <div class="lp-flow__note">フォームより<br>お気軽に</div>
+          </div>
+          <div class="lp-flow__step">
+            <div class="lp-flow__num">2</div>
+            <div class="lp-flow__label">ヒアリング・<br>ご相談</div>
+            <div class="lp-flow__note">無料・オンライン可</div>
+          </div>
+          <div class="lp-flow__step">
+            <div class="lp-flow__num">3</div>
+            <div class="lp-flow__label">要件定義・<br>お見積もり</div>
+            <div class="lp-flow__note">無料でご提示</div>
+          </div>
+          <div class="lp-flow__step">
+            <div class="lp-flow__num">4</div>
+            <div class="lp-flow__label">設計・開発</div>
+            <div class="lp-flow__note">アジャイルで<br>スピード対応</div>
+          </div>
+          <div class="lp-flow__step">
+            <div class="lp-flow__num">5</div>
+            <div class="lp-flow__label">リリース・<br>運用保守</div>
+            <div class="lp-flow__note">継続サポート</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="lp-cta">
+      <div class="lp-container">
+        <p class="lp-cta__free">✅ 相談・見積もり 完全無料</p>
+        <h2 class="lp-cta__title">まずはお気軽にご相談ください</h2>
+        <p class="lp-cta__desc">
+          アイデア段階でも、要件定義済みでも、どちらでも大歓迎です。<br>
+          専任担当者が丁寧にヒアリングし、最適なご提案をいたします。
+        </p>
+        <a href="/contact/" class="lp-cta__btn">無料相談・お問い合わせ →</a>
+        <p class="lp-cta__note">※ 返信は通常1営業日以内</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="lp-footer">
+    <small>&copy; 2024 TeckNova Inc. All Rights Reserved. | <a href="/privacy/" style="color:inherit;">プライバシーポリシー</a></small>
+  </footer>
+
+</body>
+</html>

@@ -17,6 +17,7 @@ export default defineConfig({
                 'works/mobile-app': 'works/mobile-app/index.html',
                 'works/legacy-system': 'works/legacy-system/index.html',
                 'works/ai-system': 'works/ai-system/index.html',
+                'lp': 'lp/index.html',
             },
         },
     },
