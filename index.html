@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/jpeg" href="/icon.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TeckNova | 未来を創る技術力</title>
-  <meta name="description" content="TeckNovaは東京・渋谷に拠点を置く受託開発会社です。Web・アプリ開発、DX推進、AI導入、業務自動化まで一気通貫で対応。企画から運用まで少数精鋭チームが高品質かつスピーディに価値を届けます。" />
+  <title>TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】</title>
+  <meta name="description" content="TeckNovaは中小企業・スタートアップ向けに、ChatGPT等のAIを活用した業務自動化・DX支援・システム開発を提供する東京・渋谷の専門会社です。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品・代表直接対応。まずは無料ヒアリングへ。" />
 
   <!-- ドメイン: teck-nova.jp (public/CNAME より) -->
   <link rel="canonical" href="https://teck-nova.jp/" />
@@ -14,16 +14,16 @@
   <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TeckNova" />
-  <meta property="og:title" content="TeckNova | 未来を創る技術力" />
-  <meta property="og:description" content="TeckNovaは東京・渋谷に拠点を置く受託開発会社です。Web・アプリ開発、DX推進、AI導入、業務自動化まで一気通貫で対応。企画から運用まで少数精鋭チームが高品質かつスピーディに価値を届けます。" />
+  <meta property="og:title" content="TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】" />
+  <meta property="og:description" content="中小企業・スタートアップ向けにAIを活用した業務自動化・DX支援を提供。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品・代表直接対応。" />
   <meta property="og:url" content="https://teck-nova.jp/" />
   <meta property="og:image" content="https://teck-nova.jp/images/ogp.png" />
   <meta property="og:locale" content="ja_JP" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TeckNova | 未来を創る技術力" />
-  <meta name="twitter:description" content="TeckNovaは東京・渋谷に拠点を置く受託開発会社です。Web・アプリ開発、DX推進、AI導入、業務自動化まで一気通貫で対応。" />
+  <meta name="twitter:title" content="TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】" />
+  <meta name="twitter:description" content="中小企業向けにAIを活用した業務自動化・DX支援を提供。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品。" />
   <meta name="twitter:image" content="https://teck-nova.jp/images/ogp.png" />
 
   <!-- JSON-LD 構造化データ -->
@@ -32,13 +32,16 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Organization", "LocalBusiness"],
+        "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
         "@id": "https://teck-nova.jp/#organization",
-        "name": "TeckNova株式会社",
-        "alternateName": "TeckNova",
-        "url": "https://teck-nova.jp",
+        "name": "TeckNova",
+        "alternateName": "テックノバ",
+        "url": "https://teck-nova.jp/",
         "logo": "https://teck-nova.jp/icon.jpg",
-        "description": "東京・渋谷を拠点とする受託開発会社。Web・スマホアプリ開発、DX推進、AI導入、業務自動化を企画から運用まで一貫して提供。",
+        "image": "https://teck-nova.jp/images/ogp.png",
+        "description": "AIを活用した業務DX支援・システム開発を専門とする会社。中小企業・スタートアップ向けに、ChatGPT等の最新AI技術を業務に組み込んだシステムを低コスト・短期間で開発。工務店・EC・士業・整骨院など業種特化の実績あり。",
+        "slogan": "AIで、御社の仕事を変える。",
+        "foundingDate": "2026-04",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "恵比寿西2丁目4番8号 ウィンド恵比寿ビル8F",
@@ -53,17 +56,54 @@
           "url": "https://teck-nova.jp/contact/",
           "availableLanguage": "Japanese"
         },
-        "areaServed": "JP",
+        "founder": {
+          "@type": "Person",
+          "name": "斉藤 勇貴",
+          "jobTitle": "代表",
+          "worksFor": { "@id": "https://teck-nova.jp/#organization" }
+        },
+        "areaServed": { "@type": "Country", "name": "Japan" },
+        "knowsAbout": [
+          "AI業務自動化", "業務DX支援", "ChatGPT業務活用", "システム開発",
+          "中小企業DX", "工務店システム", "EC在庫管理自動化", "士業書類自動化",
+          "整骨院予約システム", "不動産業務効率化", "RPA", "業務システム開発"
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "開発サービス一覧",
+          "name": "AI×DX支援サービス",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WEBアプリケーション開発", "description": "SaaS型サービス、マッチングプラットフォームなどのWebアプリを設計・開発・運用します。" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ホームページ制作・リニューアル", "description": "コーポレートサイト、ECサイトなどのホームページ制作および既存サイトのリニューアルを行います。" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "スマホアプリ開発", "description": "iOS・Android向けのネイティブアプリおよびクロスプラットフォームアプリを開発します。" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "業務自動化・DX推進", "description": "RPAや自動化ツールを活用し、業務プロセスのデジタル化・効率化を実現します。" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AIシステム開発", "description": "ChatGPTなどのLLMを活用した社内AIチャット、画像解析、自動見積システムなどを開発します。" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "レガシーシステム刷新", "description": "老朽化した基幹システムをモダンなWebアーキテクチャへ移行・刷新します。" } }
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI業務自動化",
+                "description": "ChatGPT等のAIを使った書類自動生成・問い合わせ自動返信・データ集計の自動化。最短2週間で導入可能。中小企業の繰り返し作業をゼロにします。"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "業務システム開発",
+                "description": "顧客管理・予約管理・在庫管理・施工管理など業種特化の業務システムを低コストでスクラッチ開発。大手SIerの1/3〜1/5のコストで実現。"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AIデータ活用基盤構築",
+                "description": "既存システム間のAPI連携・売上データの可視化・AI分析レポートの自動生成・ダッシュボード構築。意思決定をデータで支援。"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "DX戦略策定・コンサルティング",
+                "description": "中小企業のDX化方針を策定し、優先順位の高い業務から段階的に自動化・システム化を支援。30分の無料ヒアリングから対応。"
+              }
+            }
           ]
         }
       },
@@ -71,7 +111,7 @@
         "@type": "WebSite",
         "@id": "https://teck-nova.jp/#website",
         "name": "TeckNova",
-        "url": "https://teck-nova.jp",
+        "url": "https://teck-nova.jp/",
         "publisher": { "@id": "https://teck-nova.jp/#organization" },
         "inLanguage": "ja"
       },
@@ -84,31 +124,63 @@
             "name": "TeckNovaはどんな会社ですか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TeckNovaは東京都渋谷区に本社を置く受託開発会社です。Web・スマホアプリ開発、ホームページ制作、業務自動化（DX推進）、AIシステム開発、レガシーシステム刷新まで、企画・デザイン・開発・運用を一気通貫で提供しています。"
+              "text": "TeckNovaは2026年4月設立の、AIを活用した業務DX支援・システム開発専門会社です。代表の斉藤が営業・PM・開発をすべて直接担当。中小企業・スタートアップ向けに、大手SIerの1/3〜1/5のコストでAI業務自動化・業務システム開発を提供しています。東京渋谷を拠点にオンラインで全国対応しています。"
             }
           },
           {
             "@type": "Question",
-            "name": "どんな開発を依頼できますか？",
+            "name": "中小企業でもAIや業務自動化を導入できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "WEBアプリケーション開発（SaaS・マッチングプラットフォームなど）、ホームページ制作・リニューアル、iOS/Androidスマホアプリ開発、RPA・業務自動化、AIシステム（RAG・画像解析）、レガシーシステム刷新など幅広く対応しています。"
+              "text": "はい。TeckNovaは中小企業・スタートアップ専門のAI×DX支援会社です。スモールスタートから対応しており、大手SIerの1/3〜1/5のコストで導入できます。まずは30分の無料ヒアリングで、どの業務をどう自動化するかを一緒に整理します。"
             }
           },
           {
             "@type": "Question",
-            "name": "ゼロから相談できますか？",
+            "name": "ChatGPTを社内業務に活用したいがどこに相談すればいいですか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "はい。アイデア段階のご相談から対応しています。企画・要件定義・設計・開発・運用保守まで、必要なフェーズから柔軟に参画・サポートします。"
+              "text": "TeckNovaにご相談ください。ChatGPT・Claude・Geminiなどの最新AIを業務システムに組み込み、書類自動生成・問い合わせ自動返信・データ分析レポートの自動化など、具体的な業務課題に合わせたAI活用システムを開発します。まずは30分の無料ヒアリングからお気軽にどうぞ。"
             }
           },
           {
             "@type": "Question",
-            "name": "大手SIerやフリーランスとの違いは何ですか？",
+            "name": "工務店・建設業のDX化・システム化を相談できますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "TeckNovaは経験豊富な少数精鋭チームによるモダンで堅牢な設計、素早いデモ作成によるアジャイル開発、企画からデザイン・エンジニアリングまでの一気通貫体制を強みとしています。大手SIerに比べてコストパフォーマンスが高く、フリーランスに比べてチームとしての品質管理と継続的な運用保守が可能です。"
+              "text": "はい。施工管理システム・見積書自動生成・現場連絡デジタル化・工程管理・原価管理など、工務店特有の業務課題に対応したシステム開発の実績があります。現場スタッフがスマホで進捗入力するだけで、管理者がリアルタイムで全体を把握できる仕組みを構築します。見積作業時間を90%削減した事例があります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "EC・ネットショップの業務自動化は対応していますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "対応しています。楽天・Amazon・Yahoo!ショッピングなど複数モールの在庫統合管理、注文処理の自動化、AIによる問い合わせ自動返信システムの開発実績があります。月40時間以上の作業削減・CS対応80%自動化を実現した事例があります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "整骨院や歯科医院の予約管理システムを開発できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "できます。LINE・Webからの24時間自動予約受付、前日リマインド自動送信、院内スケジュール自動反映などのシステムを開発しています。電話対応時間を95%削減した事例があります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "税理士・司法書士などの士業事務所でAIを活用できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい。書類の自動作成・AIチェック、申告期限の自動リマインド、顧客情報の一元管理システムを提供しています。繁忙期の残業を60%削減した事例があります。セキュリティ・機密情報の取り扱いも、NDA締結のうえ徹底管理します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "費用はどのくらいかかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ご要望・規模に応じてお見積もりします。初回相談・お見積もりは完全無料です。「まず小さく試したい」というスモールスタートから「全社DX基盤を構築したい」という大規模対応まで柔軟に対応します。お気軽にお問い合わせください。"
             }
           },
           {
@@ -116,15 +188,15 @@
             "name": "開発の流れを教えてください。",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "①ご相談・ヒアリング → ②要件定義・見積 → ③設計・デザイン → ④開発・テスト → ⑤リリース・運用保守、という流れが基本です。お客様の状況に応じて、途中のフェーズからの参画も可能です。"
+              "text": "①無料ヒアリング（30分・オンライン）→ ②AI改善提案・お見積もり（無料）→ ③開発・実装（アジャイル、途中変更OK）→ ④納品・操作研修 → ⑤保守・継続改善、の5ステップです。"
             }
           },
           {
             "@type": "Question",
-            "name": "相談・見積もりは無料ですか？",
+            "name": "開発後のサポートや保守は対応していますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "はい、初回のご相談・お見積もりは無料です。お問い合わせフォームよりお気軽にご連絡ください。"
+              "text": "はい。月次保守・運用サポートプランをご用意しています。バグ対応・機能追加・定期メンテナンスを継続的に行います。「作ったら終わり」ではなく、業務改善の成果が出るまで責任を持ってサポートします。"
             }
           }
         ]
@@ -440,6 +512,48 @@
             <summary class="faq__question">相談・見積もりは無料ですか？</summary>
             <div class="faq__answer">
               <p>はい、初回のご相談・お見積もりは無料です。お問い合わせフォームよりお気軽にご連絡ください。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">中小企業でもAIや業務自動化を導入できますか？</summary>
+            <div class="faq__answer">
+              <p>はい。TeckNovaは中小企業・スタートアップ専門のAI×DX支援会社です。スモールスタートから対応しており、大手SIerの1/3〜1/5のコストで導入できます。「何を自動化したらいいか分からない」という段階からでも、30分の無料ヒアリングで一緒に整理します。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">ChatGPTを社内業務に活用したいが、どこに相談すればいいですか？</summary>
+            <div class="faq__answer">
+              <p>TeckNovaにご相談ください。ChatGPT・Claude・Geminiなどの最新AIを業務システムに組み込み、書類自動生成・問い合わせ自動返信・データ分析レポートの自動化など、具体的な業務課題に合わせたシステムを開発します。まずは30分の無料ヒアリングへお気軽にどうぞ。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">工務店・建設業のDX化・システム化を相談できますか？</summary>
+            <div class="faq__answer">
+              <p>はい。施工管理システム・見積書自動生成・現場連絡デジタル化・工程管理・原価管理など、工務店特有の業務課題に対応したシステム開発の実績があります。現場スタッフがスマホで進捗入力するだけで、管理者がリアルタイムで全体を把握できる仕組みを構築します。見積作業時間を<strong>90%削減</strong>した事例があります。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">EC・ネットショップの業務自動化は対応していますか？</summary>
+            <div class="faq__answer">
+              <p>対応しています。楽天・Amazon・Yahoo!ショッピングなど複数モールの在庫統合管理、注文処理の自動化、AIによる問い合わせ自動返信システムの開発実績があります。月40時間以上の作業削減・CS対応<strong>80%自動化</strong>を実現した事例があります。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">整骨院・クリニックの予約管理システムを開発できますか？</summary>
+            <div class="faq__answer">
+              <p>できます。LINE・Webからの24時間自動予約受付、前日リマインド自動送信、院内スケジュール自動反映などのシステムを開発しています。電話対応時間を<strong>95%削減</strong>した事例があります。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">税理士・司法書士などの士業事務所でAIを活用できますか？</summary>
+            <div class="faq__answer">
+              <p>はい。書類の自動作成・AIチェック、申告期限の自動リマインド、顧客情報の一元管理システムを提供しています。繁忙期の残業を<strong>60%削減</strong>した事例があります。セキュリティ・機密情報の取り扱いも、NDA締結のうえ徹底管理します。</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">費用はどのくらいかかりますか？</summary>
+            <div class="faq__answer">
+              <p>ご要望・規模に応じてお見積もりします。初回相談・お見積もりは<strong>完全無料</strong>です。「まず小さく試したい」というスモールスタートから「全社DX基盤を構築したい」という大規模対応まで柔軟に対応します。お気軽にお問い合わせください。</p>
             </div>
           </details>
         </div>
