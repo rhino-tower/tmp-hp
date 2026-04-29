@@ -38,6 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (termForm) {
     const btn = document.getElementById('termSubmit');
     const st = document.getElementById('termStatus');
+
+    // SSGform はブラウザの fetch では CORS でブロックされるため、
+    // 隠し iframe をターゲットにした通常の form POST で送信する
+    termForm.action = 'https://ssgform.com/s/QMmAZFKXepx2';
+    termForm.method = 'post';
+    const iframe = document.createElement('iframe');
+    iframe.name = 'ssgform-target';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    termForm.target = 'ssgform-target';
+
     termForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!termForm.checkValidity()) {
@@ -45,19 +56,33 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       btn.disabled = true;
-      const steps = [
+      st.innerHTML = '';
+
+      const animSteps = [
         '> validating input.......... [  OK  ]',
         '> encrypting payload........ [  OK  ]',
-        '> transmitting to server.... [  OK  ]',
+        '> transmitting to server....',
       ];
-      st.innerHTML = '';
-      for (const s of steps) {
+      for (let i = 0; i < animSteps.length - 1; i++) {
         await new Promise(r => setTimeout(r, 420));
-        st.innerHTML += s.replace('[  OK  ]', '<span class="ok">[  OK  ]</span>') + '<br>';
+        st.innerHTML += animSteps[i].replace('[  OK  ]', '<span class="ok">[  OK  ]</span>') + '<br>';
       }
-      await new Promise(r => setTimeout(r, 300));
-      st.innerHTML += '<span class="ok">&gt; message sent.</span> 24時間以内にご返信します。';
-      termForm.reset();
+      await new Promise(r => setTimeout(r, 420));
+      st.innerHTML += animSteps[animSteps.length - 1];
+
+      await new Promise((resolve, reject) => {
+        const timer = setTimeout(() => reject(new Error('timeout')), 10000);
+        iframe.onload = () => { clearTimeout(timer); resolve(); };
+        termForm.submit();
+      }).then(() => {
+        st.innerHTML += ' <span class="ok">[  OK  ]</span><br>';
+        st.innerHTML += '<span class="ok">&gt; message sent.</span> 24時間以内にご返信します。';
+        termForm.reset();
+      }).catch(() => {
+        st.innerHTML += ' <span class="err">[ ERR ]</span><br>';
+        st.innerHTML += '<span class="err">&gt; 送信に失敗しました。</span> 時間をおいて再度お試しください。';
+      });
+
       setTimeout(() => { btn.disabled = false; }, 2000);
     });
   }
