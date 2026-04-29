@@ -1,603 +1,693 @@
 <!doctype html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/jpeg" href="/icon.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】</title>
-  <meta name="description" content="TeckNovaは中小企業・スタートアップ向けに、ChatGPT等のAIを活用した業務自動化・DX支援・システム開発を提供する東京・渋谷の専門会社です。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品・代表直接対応。まずは無料ヒアリングへ。" />
-
-  <!-- ドメイン: teck-nova.jp (public/CNAME より) -->
+  <meta name="description" content="TeckNovaは中小企業・スタートアップ向けに、ChatGPT等のAIを活用した業務自動化・DX支援・システム開発を提供する東京・渋谷の専門会社です。最短2週間納品・代表直接対応。まずは無料ヒアリングへ。" />
   <link rel="canonical" href="https://teck-nova.jp/" />
-
-  <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TeckNova" />
   <meta property="og:title" content="TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】" />
-  <meta property="og:description" content="中小企業・スタートアップ向けにAIを活用した業務自動化・DX支援を提供。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品・代表直接対応。" />
+  <meta property="og:description" content="中小企業・スタートアップ向けにAIを活用した業務自動化・DX支援を提供。最短2週間納品・代表直接対応。" />
   <meta property="og:url" content="https://teck-nova.jp/" />
   <meta property="og:image" content="https://teck-nova.jp/images/ogp.png" />
   <meta property="og:locale" content="ja_JP" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TeckNova | AIを活用した業務DX支援・システム開発【中小企業向け】" />
-  <meta name="twitter:description" content="中小企業向けにAIを活用した業務自動化・DX支援を提供。工務店・EC・士業・整骨院など業種特化の実績あり。最短2週間納品。" />
+  <meta name="twitter:description" content="中小企業向けにAIを活用した業務自動化・DX支援を提供。最短2週間納品。" />
   <meta name="twitter:image" content="https://teck-nova.jp/images/ogp.png" />
 
-  <!-- JSON-LD 構造化データ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
-        "@id": "https://teck-nova.jp/#organization",
-        "name": "TeckNova",
-        "alternateName": "テックノバ",
-        "url": "https://teck-nova.jp/",
-        "logo": "https://teck-nova.jp/icon.jpg",
-        "image": "https://teck-nova.jp/images/ogp.png",
-        "description": "AIを活用した業務DX支援・システム開発を専門とする会社。中小企業・スタートアップ向けに、ChatGPT等の最新AI技術を業務に組み込んだシステムを低コスト・短期間で開発。工務店・EC・士業・整骨院など業種特化の実績あり。",
-        "slogan": "AIで、御社の仕事を変える。",
-        "foundingDate": "2026-04",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "恵比寿西2丁目4番8号 ウィンド恵比寿ビル8F",
-          "addressLocality": "渋谷区",
-          "addressRegion": "東京都",
-          "postalCode": "150-0021",
-          "addressCountry": "JP"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "url": "https://teck-nova.jp/contact/",
-          "availableLanguage": "Japanese"
-        },
-        "founder": {
-          "@type": "Person",
-          "name": "斉藤 勇貴",
-          "jobTitle": "代表",
-          "worksFor": { "@id": "https://teck-nova.jp/#organization" }
-        },
-        "areaServed": { "@type": "Country", "name": "Japan" },
-        "knowsAbout": [
-          "AI業務自動化", "業務DX支援", "ChatGPT業務活用", "システム開発",
-          "中小企業DX", "工務店システム", "EC在庫管理自動化", "士業書類自動化",
-          "整骨院予約システム", "不動産業務効率化", "RPA", "業務システム開発"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI×DX支援サービス",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI業務自動化",
-                "description": "ChatGPT等のAIを使った書類自動生成・問い合わせ自動返信・データ集計の自動化。最短2週間で導入可能。中小企業の繰り返し作業をゼロにします。"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "業務システム開発",
-                "description": "顧客管理・予約管理・在庫管理・施工管理など業種特化の業務システムを低コストでスクラッチ開発。大手SIerの1/3〜1/5のコストで実現。"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AIデータ活用基盤構築",
-                "description": "既存システム間のAPI連携・売上データの可視化・AI分析レポートの自動生成・ダッシュボード構築。意思決定をデータで支援。"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "DX戦略策定・コンサルティング",
-                "description": "中小企業のDX化方針を策定し、優先順位の高い業務から段階的に自動化・システム化を支援。30分の無料ヒアリングから対応。"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://teck-nova.jp/#website",
-        "name": "TeckNova",
-        "url": "https://teck-nova.jp/",
-        "publisher": { "@id": "https://teck-nova.jp/#organization" },
-        "inLanguage": "ja"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://teck-nova.jp/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "TeckNovaはどんな会社ですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TeckNovaは2026年4月設立の、AIを活用した業務DX支援・システム開発専門会社です。代表の斉藤が営業・PM・開発をすべて直接担当。中小企業・スタートアップ向けに、大手SIerの1/3〜1/5のコストでAI業務自動化・業務システム開発を提供しています。東京渋谷を拠点にオンラインで全国対応しています。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "中小企業でもAIや業務自動化を導入できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい。TeckNovaは中小企業・スタートアップ専門のAI×DX支援会社です。スモールスタートから対応しており、大手SIerの1/3〜1/5のコストで導入できます。まずは30分の無料ヒアリングで、どの業務をどう自動化するかを一緒に整理します。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ChatGPTを社内業務に活用したいがどこに相談すればいいですか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "TeckNovaにご相談ください。ChatGPT・Claude・Geminiなどの最新AIを業務システムに組み込み、書類自動生成・問い合わせ自動返信・データ分析レポートの自動化など、具体的な業務課題に合わせたAI活用システムを開発します。まずは30分の無料ヒアリングからお気軽にどうぞ。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "工務店・建設業のDX化・システム化を相談できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい。施工管理システム・見積書自動生成・現場連絡デジタル化・工程管理・原価管理など、工務店特有の業務課題に対応したシステム開発の実績があります。現場スタッフがスマホで進捗入力するだけで、管理者がリアルタイムで全体を把握できる仕組みを構築します。見積作業時間を90%削減した事例があります。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "EC・ネットショップの業務自動化は対応していますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "対応しています。楽天・Amazon・Yahoo!ショッピングなど複数モールの在庫統合管理、注文処理の自動化、AIによる問い合わせ自動返信システムの開発実績があります。月40時間以上の作業削減・CS対応80%自動化を実現した事例があります。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "整骨院や歯科医院の予約管理システムを開発できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "できます。LINE・Webからの24時間自動予約受付、前日リマインド自動送信、院内スケジュール自動反映などのシステムを開発しています。電話対応時間を95%削減した事例があります。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "税理士・司法書士などの士業事務所でAIを活用できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい。書類の自動作成・AIチェック、申告期限の自動リマインド、顧客情報の一元管理システムを提供しています。繁忙期の残業を60%削減した事例があります。セキュリティ・機密情報の取り扱いも、NDA締結のうえ徹底管理します。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "費用はどのくらいかかりますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ご要望・規模に応じてお見積もりします。初回相談・お見積もりは完全無料です。「まず小さく試したい」というスモールスタートから「全社DX基盤を構築したい」という大規模対応まで柔軟に対応します。お気軽にお問い合わせください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "開発の流れを教えてください。",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "①無料ヒアリング（30分・オンライン）→ ②AI改善提案・お見積もり（無料）→ ③開発・実装（アジャイル、途中変更OK）→ ④納品・操作研修 → ⑤保守・継続改善、の5ステップです。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "開発後のサポートや保守は対応していますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "はい。月次保守・運用サポートプランをご用意しています。バグ対応・機能追加・定期メンテナンスを継続的に行います。「作ったら終わり」ではなく、業務改善の成果が出るまで責任を持ってサポートします。"
-            }
-          }
-        ]
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness","ProfessionalService"],"@id":"https://teck-nova.jp/#organization","name":"TeckNova","alternateName":"テックノバ","url":"https://teck-nova.jp/","logo":"https://teck-nova.jp/icon.jpg","description":"AIを活用した業務DX支援・システム開発を専門とする会社。中小企業向けに低コスト・短期間でAI業務自動化・業務システム開発を提供。","foundingDate":"2026-04","address":{"@type":"PostalAddress","streetAddress":"恵比寿西2丁目4番8号 ウィンド恵比寿ビル8F","addressLocality":"渋谷区","addressRegion":"東京都","postalCode":"150-0021","addressCountry":"JP"},"founder":{"@type":"Person","name":"斉藤 勇貴"}},{"@type":"WebSite","@id":"https://teck-nova.jp/#website","name":"TeckNova","url":"https://teck-nova.jp/","inLanguage":"ja"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"中小企業でもAIや業務自動化を導入できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。スモールスタートから対応しており、大手SIerの1/3〜1/5のコストで導入できます。"}},{"@type":"Question","name":"費用はどのくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"初回相談・お見積もりは完全無料です。スモールスタートから大規模対応まで柔軟に対応します。"}}]}]}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans+JP:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-  <header class="header">
-    <div class="container header__container">
-      <a href="#" class="logo">TeckNova</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#strength" class="nav__link">開発体制</a></li>
-          <li class="nav__item"><a href="works/" class="nav__link">開発事例</a></li>
-          <li class="nav__item"><a href="#news" class="nav__link">お知らせ</a></li>
-        </ul>
-      </nav>
-      <a href="contact/" class="btn btn--primary header__cta">お問い合わせ</a>
-      <button class="mobile-menu-btn" aria-label="メニューを開く">
-        <span class="mobile-menu-btn__line"></span>
-        <span class="mobile-menu-btn__line"></span>
-        <span class="mobile-menu-btn__line"></span>
-      </button>
+
+<!-- SHELL STATUS BAR -->
+<div class="shell">
+  <div class="container shell__row">
+    <div class="shell__left">
+      <span><b>tecknova@shibuya</b>:~$ <span class="blink">▮</span></span>
+      <span>tty: /dev/hp00</span>
+      <span>uptime: <span id="shell-uptime">0h 00m 00s</span></span>
     </div>
-  </header>
+    <div class="shell__right">
+      <span>LOAD: 0.04 0.02 0.01</span>
+      <span id="shell-date">JST 2026.04.20</span>
+      <span>[ OK ]</span>
+    </div>
+  </div>
+</div>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="hero__bg-slider">
-        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_code.png')"></div>
-        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_team.png')"></div>
-        <div class="hero__bg-slide" style="background-image: url('images/hero_dev_laptop.png')"></div>
-      </div>
-      <div class="hero__overlay"></div>
-      <div class="container hero__container">
-        <h1 class="hero__title">
-          未来を創る<br class="u-mobile-only">技術力
-          <span class="hero__subtitle">Tecknology for a better future</span>
-        </h1>
-        <p class="hero__description">
-          私たちは最先端の技術とデザインで、<br>
-          お客様のビジネスに新たな価値を提供します。
-        </p>
-        <div class="hero__buttons">
-          <a href="works/" class="btn hero__cta btn--large">開発事例一覧を見る</a>
+<!-- HEADER -->
+<header class="hdr">
+  <div class="container hdr__row">
+    <a href="/" class="logo">
+      <span class="logo__box">T</span>
+      <span>TeckNova<small>// System Integration</small></span>
+    </a>
+    <nav class="nav">
+      <div class="nav__group">
+        <a href="/service/">[01] Service</a>
+        <div class="nav__drop">
+          <a href="/service/ai-automation/">AI業務自動化</a>
+          <a href="/service/system-dev/">業務システム開発</a>
+          <a href="/service/dx-consulting/">DX戦略策定</a>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-indicator__line"></div>
+      <div class="nav__group">
+        <a href="/industry/">[02] Industry</a>
+        <div class="nav__drop">
+          <a href="/industry/it/">IT・Web業界</a>
+          <a href="/industry/ec/">EC・ネットショップ</a>
+          <a href="/industry/real-estate/">不動産</a>
+          <a href="/industry/professional/">士業</a>
+          <a href="/industry/clinic/">整骨院・クリニック</a>
+        </div>
       </div>
-    </section>
+      <a href="/package/">[03] Package</a>
+      <a href="/package/">[03] Package</a><a href="/works/">[04] Works</a>
+      <a href="/about/">[05] Company</a>
+    </nav>
+    <a href="/contact/" class="cta-sm">無料相談</a>
+    <button class="mobile-menu-btn" aria-label="メニューを開く">
+      <span class="mobile-menu-btn__line"></span>
+      <span class="mobile-menu-btn__line"></span>
+      <span class="mobile-menu-btn__line"></span>
+    </button>
+  </div>
+</header>
 
-    <section id="strength" class="section strength">
-      <div class="container">
-        <!-- お客様のご要望に合わせた開発体制 -->
-        <h2 class="section-title" style="margin-bottom: 1rem;">お客様のご要望に合わせた柔軟な開発体制<span
-            class="section-title__sub">Flexible Development</span></h2>
-        <p style="text-align: center; margin-bottom: 3rem; color: var(--color-text-light); line-height: 1.8;">
-          企画、デザイン、開発といったすべての工程を自社内で完結し、密な連携を取ることで、<br class="hidden-mobile">
-          お客様に満足いただける「高品質」かつ「スピーディーな価値提供」を可能にします。<br>
-          TeckNovaはお客様の状況に合わせて、必要なフェーズから柔軟に参画・サポートいたします。
-        </p>
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" aria-label="モバイルナビ">
+  <button class="mobile-nav__close">[ CLOSE ]</button>
+  <a href="/service/">Service</a>
+  <a href="/service/ai-automation/">AI業務自動化</a>
+  <a href="/service/system-dev/">業務システム開発</a>
+  <a href="/service/dx-consulting/">DX戦略策定</a>
+  <a href="/industry/">Industry</a>
+  <a href="/package/">Package</a><a href="/works/">Works</a>
+  <a href="/about/">Company</a>
+  <a href="/contact/" class="cta-sm">無料相談</a>
+</nav>
 
-        <div class="dev-flow-wrapper" style="margin-top: 0;">
-          <!-- Case 1 -->
-          <div class="dev-flow-card">
-            <h4 class="dev-flow-card__title">ケース1：ゼロから丸ごとお願いしたい（ご相談〜開発・運用）</h4>
-            <div class="dev-flow-steps">
-              <div class="dev-flow-step step-active">ご相談・企画</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">要件定義</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">設計・デザイン</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">開発・テスト</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">運用・保守</div>
-            </div>
-            <p class="dev-flow-desc"><span class="badge">TeckNova担当</span> 企画段階からパートナーとして伴走し、ビジネスの立ち上げから運用までフルサポートします。
-            </p>
-          </div>
+<main>
 
-          <!-- Case 2 -->
-          <div class="dev-flow-card">
-            <h4 class="dev-flow-card__title">ケース2：作りたいものはあるが、要件定義からお願いしたい</h4>
-            <div class="dev-flow-steps">
-              <div class="dev-flow-step step-inactive">お客様内で企画</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">要件定義</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">設計・デザイン</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">開発・テスト</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">運用・保守</div>
-            </div>
-            <p class="dev-flow-desc"><span class="badge">TeckNova担当</span> お客様のアイデアをシステム要件に落とし込み、最適な設計・開発を行います。</p>
-          </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__rule-top"></div>
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <h1 class="hero__h1">
+            <span class="l1">テクノロジーの<em>力</em>で、</span>
+            <span class="l2">仕事をもっと<span class="rev">スマート</span>に。</span>
+            <span class="jp-en">AI × System for real work</span>
+          </h1>
 
-          <!-- Case 3 -->
-          <div class="dev-flow-card">
-            <h4 class="dev-flow-card__title">ケース3：要件定義は済んでおり、開発からお願いしたい</h4>
-            <div class="dev-flow-steps">
-              <div class="dev-flow-step step-inactive">お客様内で企画</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-inactive">お客様内で要件定義</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">設計・デザイン</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">開発・テスト</div>
-              <div class="dev-flow-arrow"></div>
-              <div class="dev-flow-step step-active">運用・保守</div>
-            </div>
-            <p class="dev-flow-desc"><span class="badge">TeckNova担当</span> 確定した要件をベースに、モダンな技術スタックで高品質・スピーディに開発します。</p>
+          <p class="hero__lede">
+            <strong>TeckNova（テックノバ）</strong> は、中小企業・スタートアップのための AI 業務自動化・業務システム開発の専門会社です。書類作成、問い合わせ対応、データ集計——そうした繰り返しの作業を AI を組み込んだシステムに任せ、人は考える仕事に集中できる状態をつくります。
+          </p>
+
+          <div class="hero__btns">
+            <a href="/contact/" class="btn btn--primary">30分の無料相談</a>
+            <a href="/service/" class="btn btn--ghost">サービスを見る</a>
           </div>
         </div>
 
-        <!-- 比較表 -->
-        <div class="comparison-wrapper" style="margin-top: 5rem;">
-          <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">他社との比較</h3>
-          <div class="table-responsive">
-            <table class="comparison-table">
-              <thead>
-                <tr>
-                  <th>比較項目</th>
-                  <th>当社（TeckNova）</th>
-                  <th>A社<span class="remark">（拠点重視/格安系）</span></th>
-                  <th>B社<span class="remark">（大手/グローバル系）</span></th>
-                  <th>C社<span class="remark">（人材派遣/SES系）</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>品質・アーキテクチャ</th>
-                  <td class="highlight">◎<span class="remark">経験豊富な少数精鋭による<br>モダンで堅牢な設計</span></td>
-                  <td>〇<span class="remark">コスト重視のため<br>属人的になりやすい</span></td>
-                  <td>◎<span class="remark">高品質だが<br>大規模向けで期間が必要</span></td>
-                  <td>△<span class="remark">アサインされる<br>人材のスキルに依存する</span></td>
-                </tr>
-                <tr>
-                  <th>開発スピード<br>（アジャイル）</th>
-                  <td class="highlight">◎<span class="remark">素早いデモ作成で<br>認識齟齬なく最速で価値提供</span></td>
-                  <td>△<span class="remark">仕様確定後の<br>変更が難しいことが多い</span></td>
-                  <td>△<span class="remark">社内調整・プロセスが多く<br>小回りが利きにくい</span></td>
-                  <td>〇<span class="remark">人材ベースのため<br>柔軟だが全体管理が弱い</span></td>
-                </tr>
-                <tr>
-                  <th>企画〜運用の<br>一気通貫体制</th>
-                  <td class="highlight">◎<span class="remark">企画・デザイナー・エンジニアが<br>連携してハイクオリティを提供</span></td>
-                  <td>△<span class="remark">言われた通りに作る<br>「開発のみ」が多い</span></td>
-                  <td>◎<span class="remark">戦略から対応可能だが<br>コンサル費用が非常に高額</span></td>
-                  <td>×<span class="remark">基本は開発リソースの<br>提供のみ</span></td>
-                </tr>
-                <tr>
-                  <th>コストパフォーマンス</th>
-                  <td class="highlight">◎<span class="remark">無駄な中間マージンをカットし<br>高い投資対効果を実現</span></td>
-                  <td>◎<span class="remark">初期費用は安価</span></td>
-                  <td>△<span class="remark">多重下請けや維持費で<br>高コストになりがち</span></td>
-                  <td>〇<span class="remark">月額固定だが<br>成果物へのコミットはない</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <section id="works" class="section works">
-      <div class="container">
-        <h2 class="section-title">開発事例 <span class="section-title__sub">Works</span></h2>
-        <div class="works__slider">
-          <a href="works/app-dev/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/app_dev_case.png" alt="WEBアプリケーション開発" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        <!-- Terminal panel -->
+        <div class="hero__term-wrap">
+          <div class="term">
+            <div class="term__bar">
+              <div class="term__bar-dots"><i></i><i></i><i></i></div>
+              <span>tecknova.sh — 80×24</span>
+              <span>●●●</span>
             </div>
-            <div class="work-card__info">
-              <p class="work-card__category">Web Application</p>
-              <h3 class="work-card__title">WEBアプリケーション開発<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：SaaS型勤怠管理、マッチングプラットフォーム</span>
-              </h3>
+            <div class="term__body">
+<div class="term__line"><span class="term__prompt">$</span> whoami</div>
+<div class="term__line">TeckNova / Shibuya, Tokyo / est.2026</div>
+<div class="term__line">&nbsp;</div>
+<div class="term__line"><span class="term__prompt">$</span> cat /etc/tecknova.conf</div>
+<div class="term__line"><span class="kw">service</span>  <span class="muted">=</span> <span class="str">"AI × DX Support"</span></div>
+<div class="term__line"><span class="kw">clients</span>  <span class="muted">=</span> <span class="str">"SMB / Startup"</span></div>
+<div class="term__line"><span class="kw">speed</span>    <span class="muted">=</span> <span class="str">"2 weeks ship"</span></div>
+<div class="term__line"><span class="kw">cost</span>     <span class="muted">=</span> <span class="str">"1/3 of big SIer"</span></div>
+<div class="term__line"><span class="kw">contact</span>  <span class="muted">=</span> <span class="str">"y.saito@teck-nova.jp"</span></div>
+<div class="term__line">&nbsp;</div>
+<div class="term__line"><span class="term__prompt">$</span> ./contact.sh --new</div>
+<div class="term__line"><span class="cmt">&gt; お問い合わせフォームを起動中...</span></div>
+<div class="term__line">&nbsp;</div>
+<form class="term__form" id="termForm" novalidate>
+  <div class="term__field">
+    <label for="f-company"><span class="term__prompt-arrow">&gt;</span>&nbsp;company:</label>
+    <input class="term__input" id="f-company" name="company" type="text" placeholder="株式会社〇〇" required />
+  </div>
+  <div class="term__field">
+    <label for="f-name"><span class="term__prompt-arrow">&gt;</span>&nbsp;name&nbsp;&nbsp;&nbsp;:</label>
+    <input class="term__input" id="f-name" name="name" type="text" placeholder="山田 太郎" required />
+  </div>
+  <div class="term__field">
+    <label for="f-email"><span class="term__prompt-arrow">&gt;</span>&nbsp;email&nbsp;&nbsp;:</label>
+    <input class="term__input" id="f-email" name="email" type="email" placeholder="you@example.com" required />
+  </div>
+  <div class="term__field">
+    <label for="f-msg"><span class="term__prompt-arrow">&gt;</span>&nbsp;message:</label>
+    <input class="term__input" id="f-msg" name="message" type="text" placeholder="ご相談内容をどうぞ" required />
+  </div>
+  <button class="term__submit" type="submit" id="termSubmit">[ SEND ] ./submit</button>
+  <div class="term__status" id="termStatus">&nbsp;</div>
+</form>
+<div class="term__line">&nbsp;</div>
+<div class="term__line"><span class="term__prompt">$</span> <span>_<span class="term__caret"></span></span></div>
             </div>
-          </a>
-          <a href="works/website-dev/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/website_dev_case.png" alt="ホームページ制作、リニューアル" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-            <div class="work-card__info">
-              <p class="work-card__category">Website</p>
-              <h3 class="work-card__title">ホームページ制作、リニューアル<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：大手ファッションサイト、上場企業コーポレート</span>
-              </h3>
-            </div>
-          </a>
-          <a href="works/automation/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/automation_dev_case.png" alt="業務自動化" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-            <div class="work-card__info">
-              <p class="work-card__category">DX / Automation</p>
-              <h3 class="work-card__title">業務自動化<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：アポ獲得自動化システム、請求書処理RPA</span>
-              </h3>
-            </div>
-          </a>
-          <a href="works/mobile-app/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/mobile_app_dev_case.png" alt="スマホアプリ開発" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-            <div class="work-card__info">
-              <p class="work-card__category">Mobile App</p>
-              <h3 class="work-card__title">スマホアプリ開発<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：ヘルスケア記録アプリ、店舗向けポイントアプリ</span>
-              </h3>
-            </div>
-          </a>
-          <a href="works/legacy-system/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/legacy_system_case.png" alt="レガシーシステムの刷新" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-            <div class="work-card__info">
-              <p class="work-card__category">System Migration</p>
-              <h3 class="work-card__title">レガシーシステムの刷新<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：基幹システム移行、モダンWebへの完全刷新</span>
-              </h3>
-            </div>
-          </a>
-          <a href="works/ai-system/" class="work-card">
-            <div class="work-card__image">
-              <img src="images/ai_system_case.png" alt="AIを組み込んだシステム開発" class="work-card__img"
-                style="width: 100%; height: 100%; object-fit: contain; display: block;">
-            </div>
-            <div class="work-card__info">
-              <p class="work-card__category">AI Integration</p>
-              <h3 class="work-card__title">AIを組み込んだシステム開発<br><span
-                  style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-light); display: block; margin-top: 0.4rem;">事例：社内AIチャット(RAG)、画像解析・自動見積</span>
-              </h3>
-            </div>
-          </a>
-        </div>
-        <div class="works__cta-wrapper">
-          <a href="works/" class="btn btn--primary btn--large">開発事例一覧を見る</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="news" class="section news">
-      <div class="container">
-        <h2 class="section-title">お知らせ <span class="section-title__sub">News</span></h2>
-        <div class="news__list">
-          <div class="news__item">
-            <time class="news__date" datetime="2026-02-26">2026.02.26</time>
-            <span class="news__category">お知らせ</span>
-            <p class="news__title">ホームページをリニューアルしました。</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="faq" class="section faq">
-      <div class="container">
-        <h2 class="section-title">よくある質問 <span class="section-title__sub">FAQ</span></h2>
-        <div class="faq__list">
-          <details class="faq__item">
-            <summary class="faq__question">TeckNovaはどんな会社ですか？</summary>
-            <div class="faq__answer">
-              <p>東京都渋谷区に本社を置く受託開発会社です。Web・スマホアプリ開発、ホームページ制作、業務自動化（DX推進）、AIシステム開発、レガシーシステム刷新まで、企画・デザイン・開発・運用を<strong>一気通貫</strong>で提供しています。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">どんな開発を依頼できますか？</summary>
-            <div class="faq__answer">
-              <p>WEBアプリケーション（SaaS・マッチングプラットフォームなど）、ホームページ制作・リニューアル、iOS/Android スマホアプリ開発、RPA・業務自動化、AI システム（RAG・画像解析）、レガシーシステム刷新など幅広く対応しています。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">アイデア段階でも相談できますか？</summary>
-            <div class="faq__answer">
-              <p>はい、大歓迎です。アイデアや課題感だけでもお聞かせください。企画・要件定義から参画し、実現可能な形に一緒に整理していきます。もちろん要件定義が済んだ状態や、開発フェーズのみのご依頼も可能です。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">大手SIerやフリーランスと何が違いますか？</summary>
-            <div class="faq__answer">
-              <p>少数精鋭チームによるモダンで堅牢な設計、素早いデモ作成によるアジャイル開発、企画〜デザイン〜エンジニアリングの一気通貫体制が強みです。大手SIerに比べてコストパフォーマンスが高く、フリーランスに比べてチームとしての品質管理と継続的な運用保守が可能です。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">開発の流れを教えてください。</summary>
-            <div class="faq__answer">
-              <p>①ご相談・ヒアリング → ②要件定義・お見積り → ③設計・デザイン → ④開発・テスト → ⑤リリース・運用保守、という流れが基本です。お客様の状況に応じて途中フェーズからの参画も柔軟に対応します。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">相談・見積もりは無料ですか？</summary>
-            <div class="faq__answer">
-              <p>はい、初回のご相談・お見積もりは無料です。お問い合わせフォームよりお気軽にご連絡ください。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">中小企業でもAIや業務自動化を導入できますか？</summary>
-            <div class="faq__answer">
-              <p>はい。TeckNovaは中小企業・スタートアップ専門のAI×DX支援会社です。スモールスタートから対応しており、大手SIerの1/3〜1/5のコストで導入できます。「何を自動化したらいいか分からない」という段階からでも、30分の無料ヒアリングで一緒に整理します。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">ChatGPTを社内業務に活用したいが、どこに相談すればいいですか？</summary>
-            <div class="faq__answer">
-              <p>TeckNovaにご相談ください。ChatGPT・Claude・Geminiなどの最新AIを業務システムに組み込み、書類自動生成・問い合わせ自動返信・データ分析レポートの自動化など、具体的な業務課題に合わせたシステムを開発します。まずは30分の無料ヒアリングへお気軽にどうぞ。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">工務店・建設業のDX化・システム化を相談できますか？</summary>
-            <div class="faq__answer">
-              <p>はい。施工管理システム・見積書自動生成・現場連絡デジタル化・工程管理・原価管理など、工務店特有の業務課題に対応したシステム開発の実績があります。現場スタッフがスマホで進捗入力するだけで、管理者がリアルタイムで全体を把握できる仕組みを構築します。見積作業時間を<strong>90%削減</strong>した事例があります。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">EC・ネットショップの業務自動化は対応していますか？</summary>
-            <div class="faq__answer">
-              <p>対応しています。楽天・Amazon・Yahoo!ショッピングなど複数モールの在庫統合管理、注文処理の自動化、AIによる問い合わせ自動返信システムの開発実績があります。月40時間以上の作業削減・CS対応<strong>80%自動化</strong>を実現した事例があります。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">整骨院・クリニックの予約管理システムを開発できますか？</summary>
-            <div class="faq__answer">
-              <p>できます。LINE・Webからの24時間自動予約受付、前日リマインド自動送信、院内スケジュール自動反映などのシステムを開発しています。電話対応時間を<strong>95%削減</strong>した事例があります。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">税理士・司法書士などの士業事務所でAIを活用できますか？</summary>
-            <div class="faq__answer">
-              <p>はい。書類の自動作成・AIチェック、申告期限の自動リマインド、顧客情報の一元管理システムを提供しています。繁忙期の残業を<strong>60%削減</strong>した事例があります。セキュリティ・機密情報の取り扱いも、NDA締結のうえ徹底管理します。</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">費用はどのくらいかかりますか？</summary>
-            <div class="faq__answer">
-              <p>ご要望・規模に応じてお見積もりします。初回相談・お見積もりは<strong>完全無料</strong>です。「まず小さく試したい」というスモールスタートから「全社DX基盤を構築したい」という大規模対応まで柔軟に対応します。お気軽にお問い合わせください。</p>
-            </div>
-          </details>
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>AI業務自動化</span>
+      <span class="alt">// ChatGPT 業務活用</span>
+      <span>業務システム開発</span>
+      <span class="alt">// DX戦略策定</span>
+      <span>RAG導入</span>
+      <span class="alt">// 見積自動生成</span>
+      <span>問い合わせ自動返信</span>
+      <span class="alt">// 在庫自動同期</span>
+      <span>AI予約管理</span>
+      <span class="alt">// 書類自動化</span>
+      <span>AI業務自動化</span>
+      <span class="alt">// ChatGPT 業務活用</span>
+      <span>業務システム開発</span>
+      <span class="alt">// DX戦略策定</span>
+      <span>RAG導入</span>
+      <span class="alt">// 見積自動生成</span>
+      <span>問い合わせ自動返信</span>
+      <span class="alt">// 在庫自動同期</span>
+      <span>AI予約管理</span>
+      <span class="alt">// 書類自動化</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="sec" id="service">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§01 / Services</span>
+        <h2 class="sec__title">
+          <em>Three</em> modules,<br>one mission.
+          <span class="jp">AI×DX支援サービス</span>
+        </h2>
+      </div>
+
+      <div class="svc-grid">
+        <a class="svc" href="/service/ai-automation/">
+          <div class="svc__num">MOD.01 <b>/ AUTOMATION</b></div>
+          <div class="svc__art">
+            <svg viewBox="0 0 120 96">
+              <rect x="6" y="56" width="24" height="28" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="10" y="60" width="16" height="2" fill="currentColor"/>
+              <rect x="10" y="65" width="16" height="2" fill="currentColor" opacity=".6"/>
+              <rect x="10" y="70" width="12" height="2" fill="currentColor" opacity=".6"/>
+              <path d="M32 70 L42 70 M38 66 L42 70 L38 74" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="44" y="50" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"/>
+              <text x="60" y="71" text-anchor="middle" font-family="IBM Plex Mono" font-weight="700" font-size="11" fill="#d94a1b">AI</text>
+              <line x1="48" y1="50" x2="48" y2="44" stroke="currentColor" stroke-width="2"/>
+              <line x1="56" y1="50" x2="56" y2="44" stroke="currentColor" stroke-width="2"/>
+              <line x1="64" y1="50" x2="64" y2="44" stroke="currentColor" stroke-width="2"/>
+              <line x1="72" y1="50" x2="72" y2="44" stroke="currentColor" stroke-width="2"/>
+              <line x1="48" y1="88" x2="48" y2="82" stroke="currentColor" stroke-width="2"/>
+              <line x1="56" y1="88" x2="56" y2="82" stroke="currentColor" stroke-width="2"/>
+              <line x1="64" y1="88" x2="64" y2="82" stroke="currentColor" stroke-width="2"/>
+              <line x1="72" y1="88" x2="72" y2="82" stroke="currentColor" stroke-width="2"/>
+              <g transform="translate(96 24)">
+                <circle r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle r="3" fill="currentColor"/>
+                <rect x="-2" y="-14" width="4" height="5" fill="currentColor"/>
+                <rect x="-2" y="9" width="4" height="5" fill="currentColor"/>
+                <rect x="-14" y="-2" width="5" height="4" fill="currentColor"/>
+                <rect x="9" y="-2" width="5" height="4" fill="currentColor"/>
+              </g>
+              <path d="M78 70 L88 70 M84 66 L88 70 L84 74" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="90" y="56" width="24" height="28" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M95 70 L100 75 L110 63" stroke="#d94a1b" stroke-width="3" fill="none" stroke-linecap="square"/>
+            </svg>
+          </div>
+          <h3 class="svc__title">AI <em>Automation</em></h3>
+          <div class="svc__title-jp">AI業務自動化</div>
+          <p class="svc__desc">書類作成・問い合わせ対応・データ集計など、繰り返しの作業を AI が自動実行。最短2週間で現場に導入できます。</p>
+          <div class="svc__chips">
+            <span class="svc__chip">ChatGPT</span>
+            <span class="svc__chip">Claude</span>
+            <span class="svc__chip">RAG</span>
+            <span class="svc__chip">RPA</span>
+          </div>
+          <div class="svc__cta">View module</div>
+        </a>
+
+        <a class="svc" href="/service/system-dev/">
+          <div class="svc__num">MOD.02 <b>/ DEVELOPMENT</b></div>
+          <div class="svc__art">
+            <svg viewBox="0 0 120 96">
+              <rect x="14" y="20" width="92" height="56" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="14" y1="30" x2="106" y2="30" stroke="currentColor" stroke-width="2"/>
+              <circle cx="22" cy="25" r="2" fill="currentColor"/>
+              <circle cx="30" cy="25" r="2" fill="currentColor"/>
+              <circle cx="38" cy="25" r="2" fill="currentColor"/>
+              <text x="20" y="46" font-family="IBM Plex Mono" font-size="7" fill="currentColor">&gt;_ build</text>
+              <rect x="22" y="52" width="60" height="3" fill="currentColor" opacity=".6"/>
+              <rect x="22" y="58" width="40" height="3" fill="#d94a1b"/>
+              <rect x="22" y="64" width="52" height="3" fill="currentColor" opacity=".4"/>
+              <rect x="50" y="80" width="20" height="6" fill="currentColor"/>
+              <rect x="40" y="86" width="40" height="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="svc__title">System <em>Build</em></h3>
+          <div class="svc__title-jp">業務システム開発</div>
+          <p class="svc__desc">顧客管理・予約管理・施工管理など、業種に特化した業務システムをスクラッチで。大手の 1/3 コストでモダンな技術を使って。</p>
+          <div class="svc__chips">
+            <span class="svc__chip">SaaS</span>
+            <span class="svc__chip">Web App</span>
+            <span class="svc__chip">API</span>
+            <span class="svc__chip">Cloud</span>
+          </div>
+          <div class="svc__cta">View module</div>
+        </a>
+
+        <a class="svc" href="/service/dx-consulting/">
+          <div class="svc__num">MOD.03 <b>/ STRATEGY</b></div>
+          <div class="svc__art">
+            <svg viewBox="0 0 120 96">
+              <rect x="10" y="40" width="28" height="16" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="82" y="40" width="28" height="16" stroke="currentColor" stroke-width="2" fill="#d94a1b" fill-opacity=".15"/>
+              <line x1="38" y1="48" x2="58" y2="48" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <line x1="62" y1="48" x2="82" y2="48" stroke="#d94a1b" stroke-width="2"/>
+              <polygon points="78,44 82,48 78,52" fill="#d94a1b"/>
+              <circle cx="60" cy="48" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="60" cy="48" r="3" fill="#d94a1b"/>
+              <text x="24" y="34" font-family="IBM Plex Mono" font-size="7" fill="currentColor" text-anchor="middle">AS-IS</text>
+              <text x="96" y="34" font-family="IBM Plex Mono" font-size="7" fill="#d94a1b" text-anchor="middle">TO-BE</text>
+              <line x1="16" y1="72" x2="104" y2="72" stroke="currentColor" stroke-dasharray="2 3" opacity=".5"/>
+              <text x="60" y="84" font-family="IBM Plex Mono" font-size="6" fill="currentColor" text-anchor="middle" opacity=".6">// roadmap</text>
+            </svg>
+          </div>
+          <h3 class="svc__title">DX <em>Strategy</em></h3>
+          <div class="svc__title-jp">DX戦略策定</div>
+          <p class="svc__desc">「何から始めればいいか」の段階から。業務フローの可視化と優先順位付き実行計画を策定し、実装まで伴走します。</p>
+          <div class="svc__chips">
+            <span class="svc__chip">Audit</span>
+            <span class="svc__chip">Roadmap</span>
+            <span class="svc__chip">PoC</span>
+            <span class="svc__chip">Training</span>
+          </div>
+          <div class="svc__cta">View module</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DARK -->
+  <section class="sec sec--dark">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§02 / Why</span>
+        <h2 class="sec__title">
+          Speed, <em>price</em>,<br>one accountable engineer.
+          <span class="jp">選ばれる、三つの理由。</span>
+        </h2>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__tag">&gt; deliver.speed</div>
+          <div class="stat__num"><em>2</em><span class="unit">weeks</span></div>
+          <div class="stat__label">最短納品期間<br>アジャイルで素早く試す</div>
+        </div>
+        <div class="stat">
+          <div class="stat__tag">&gt; deliver.cost</div>
+          <div class="stat__num"><em>⅓</em></div>
+          <div class="stat__label">大手SIer比のコスト<br>スモールスタートから</div>
+        </div>
+        <div class="stat">
+          <div class="stat__tag">&gt; deliver.impact</div>
+          <div class="stat__num"><em>90</em><span class="unit">%</span></div>
+          <div class="stat__label">見積作業時間の削減<br>AI自動生成ツール</div>
+        </div>
+        <div class="stat">
+          <div class="stat__tag">&gt; deliver.team</div>
+          <div class="stat__num"><em>1</em></div>
+          <div class="stat__label">担当は代表、直接。<br>営業・PM・開発を一貫対応</div>
         </div>
       </div>
-    </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact__container">
-        <h2 class="contact__title">お問い合わせ</h2>
-        <p class="contact__text">システム開発のご相談、お見積もりなどお気軽にお問い合わせください。</p>
-        <a href="contact/" class="btn btn--primary btn--large">お問い合わせフォームへ</a>
+      <div class="why-grid">
+        <div class="why">
+          <div class="why__n">01</div>
+          <h3 class="why__title">大手の <em>1/3〜1/5</em>、<br>スモールスタート可。</h3>
+          <p class="why__desc">大手SIerに見積もりを取って尻込みしてきた中小企業のために。最小単位で試し、効果を見てから広げられる設計にしています。</p>
+        </div>
+        <div class="why">
+          <div class="why__n">02</div>
+          <h3 class="why__title">最短 <em>2週間</em> で、<br>動くものから。</h3>
+          <p class="why__desc">要件書が完成するのを待ちません。アジャイルで素早く試作し、現場で触りながら仕様を固める。仕様変更にも柔軟に対応します。</p>
+        </div>
+        <div class="why">
+          <div class="why__n">03</div>
+          <h3 class="why__title"><em>代表が</em>、<br>直接全工程を担当。</h3>
+          <p class="why__desc">営業・PM・開発すべてを代表・斉藤が担当。「営業と開発で話が違う」というズレが起きません。一人の責任で完遂します。</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__info">
-        <a href="#" class="footer__logo">TeckNova</a>
-        <p class="footer__address">
+  <!-- INDUSTRIES -->
+  <section class="sec sec--alt" id="industry">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§03 / Industry</span>
+        <h2 class="sec__title">
+          <em>Industry</em>-specific,<br>not generic.
+          <span class="jp">業種別の実装経験</span>
+        </h2>
+      </div>
+
+      <div class="ind-grid">
+        <a href="/industry/it/" class="ind">
+          <div class="ind__num">CH.A · 001</div>
+          <div class="ind__glyph">
+            <svg viewBox="0 0 56 56"><path d="M18 20 L8 28 L18 36"/><path d="M38 20 L48 28 L38 36"/><path d="M32 16 L24 40"/></svg>
+          </div>
+          <div>
+            <div class="ind__title">IT・<em>Web</em></div>
+            <div class="ind__sub">開発効率化・社内DX</div>
+          </div>
+        </a>
+        <a href="/industry/ec/" class="ind">
+          <div class="ind__num">CH.B · 002</div>
+          <div class="ind__glyph">
+            <svg viewBox="0 0 56 56"><path d="M10 18 L46 18 L42 40 L14 40 Z"/><circle cx="20" cy="48" r="3"/><circle cx="36" cy="48" r="3"/></svg>
+          </div>
+          <div>
+            <div class="ind__title">EC・<em>Shop</em></div>
+            <div class="ind__sub">在庫統合・CS自動化</div>
+          </div>
+        </a>
+        <a href="/industry/real-estate/" class="ind">
+          <div class="ind__num">CH.C · 003</div>
+          <div class="ind__glyph">
+            <svg viewBox="0 0 56 56"><path d="M10 28 L28 12 L46 28 L46 46 L10 46 Z"/><rect x="22" y="32" width="12" height="14"/></svg>
+          </div>
+          <div>
+            <div class="ind__title">不動産</div>
+            <div class="ind__sub">問い合わせ自動対応</div>
+          </div>
+        </a>
+        <a href="/industry/professional/" class="ind">
+          <div class="ind__num">CH.D · 004</div>
+          <div class="ind__glyph">
+            <svg viewBox="0 0 56 56"><rect x="14" y="10" width="28" height="38" rx="1"/><line x1="20" y1="20" x2="36" y2="20"/><line x1="20" y1="28" x2="36" y2="28"/><line x1="20" y1="36" x2="30" y2="36"/></svg>
+          </div>
+          <div>
+            <div class="ind__title">士業</div>
+            <div class="ind__sub">書類自動作成・管理</div>
+          </div>
+        </a>
+        <a href="/industry/clinic/" class="ind">
+          <div class="ind__num">CH.E · 005</div>
+          <div class="ind__glyph">
+            <svg viewBox="0 0 56 56"><rect x="10" y="14" width="36" height="32" rx="1"/><line x1="10" y1="22" x2="46" y2="22"/><line x1="18" y1="10" x2="18" y2="18"/><line x1="38" y1="10" x2="38" y2="18"/><rect x="24" y="30" width="8" height="10"/></svg>
+          </div>
+          <div>
+            <div class="ind__title">整骨院・<em>Clinic</em></div>
+            <div class="ind__sub">AI予約管理システム</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="sec" id="works">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§04 / Works</span>
+        <h2 class="sec__title">
+          <em>Selected</em> Works.
+          <span class="jp">開発事例</span>
+        </h2>
+      </div>
+
+      <div class="works-list">
+        <a href="/works/automation/" class="work">
+          <div class="work__idx">LOG <b>#001</b></div>
+          <div class="work__title">業務 <em>自動化</em></div>
+          <div class="work__desc">見積書自動生成・問い合わせ自動返信・データ集計自動化。AI導入で作業時間を大幅削減。</div>
+          <div class="work__cat">DX / Automation</div>
+        </a>
+        <a href="/works/ai-system/" class="work">
+          <div class="work__idx">LOG <b>#002</b></div>
+          <div class="work__title"><em>AI</em> 活用システム</div>
+          <div class="work__desc">社内AIチャット（RAG）・AI予約管理・書類自動作成。ChatGPT / Claude を基幹業務に統合。</div>
+          <div class="work__cat">AI Integration</div>
+        </a>
+        <a href="/works/website-dev/" class="work">
+          <div class="work__idx">LOG <b>#003</b></div>
+          <div class="work__title">Web <em>アプリ</em> 開発</div>
+          <div class="work__desc">SaaS型管理システム・マッチングプラットフォーム。モダンなWebアーキテクチャでスクラッチ開発。</div>
+          <div class="work__cat">Web Application</div>
+        </a>
+        <a href="/works/mobile-app/" class="work">
+          <div class="work__idx">LOG <b>#004</b></div>
+          <div class="work__title">モバイル <em>App</em></div>
+          <div class="work__desc">iOS / Android 対応のネイティブ・クロスプラットフォームアプリ開発。</div>
+          <div class="work__cat">Mobile</div>
+        </a>
+        <a href="/works/legacy-system/" class="work">
+          <div class="work__idx">LOG <b>#005</b></div>
+          <div class="work__title">レガシー <em>刷新</em></div>
+          <div class="work__desc">老朽化した基幹システムをモダンなWebアーキテクチャへ移行・刷新。</div>
+          <div class="work__cat">Migration</div>
+        </a>
+      </div>
+
+      <div style="margin-top:32px;display:flex;justify-content:flex-end;">
+        <a href="/works/" class="btn btn--ghost">開発事例をすべて見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="sec sec--alt">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§05 / Process</span>
+        <h2 class="sec__title">
+          Five stages,<br>from <em>idea</em> to impact.
+          <span class="jp">ご依頼の流れ</span>
+        </h2>
+      </div>
+
+      <div class="flow">
+        <div class="flow__step">
+          <div class="flow__n">&gt; STAGE 01</div>
+          <div class="flow__title">無料<br>ヒアリング</div>
+          <div class="flow__desc">30分のオンライン相談で、現状の業務課題と期待成果を整理します。</div>
+          <div class="flow__meta">30 min / online</div>
+        </div>
+        <div class="flow__step">
+          <div class="flow__n">&gt; STAGE 02</div>
+          <div class="flow__title">提案と<br>見積り</div>
+          <div class="flow__desc">AI改善提案・スコープ・費用概算を無料でお渡しします。</div>
+          <div class="flow__meta">free / 3-5 days</div>
+        </div>
+        <div class="flow__step">
+          <div class="flow__n">&gt; STAGE 03</div>
+          <div class="flow__title">開発と<br>実装</div>
+          <div class="flow__desc">アジャイル開発で素早く試作し、動くものから現場に置いていきます。</div>
+          <div class="flow__meta">2-8 weeks</div>
+        </div>
+        <div class="flow__step">
+          <div class="flow__n">&gt; STAGE 04</div>
+          <div class="flow__title">納品と<br>操作研修</div>
+          <div class="flow__desc">現場スタッフへのトレーニングまで含めて引き渡します。</div>
+          <div class="flow__meta">1-2 sessions</div>
+        </div>
+        <div class="flow__step">
+          <div class="flow__n">&gt; STAGE 05</div>
+          <div class="flow__title">保守と<br>継続改善</div>
+          <div class="flow__desc">運用データを元に継続的に改善。月次保守プランあり。</div>
+          <div class="flow__meta">monthly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS + COMPANY -->
+  <section class="sec sec--alt" id="company">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <div class="panel-sub">§06 / News — <span style="color:var(--hazard)">RECENT</span></div>
+          <h2 class="panel-title">お知らせ<em>.</em></h2>
+          <div class="news">
+            <div class="news__item">
+              <time class="news__date">2026.04.20</time>
+              <span class="news__cat">Service</span>
+              <div class="news__title">AI × DX 支援サービスを正式リリース。業種別ランディングページも公開中です。</div>
+            </div>
+            <div class="news__item">
+              <time class="news__date">2026.04.01</time>
+              <span class="news__cat">Company</span>
+              <div class="news__title">株式会社 TeckNova（テックノバ）を東京・渋谷にて設立しました。</div>
+            </div>
+            <div class="news__item">
+              <time class="news__date">2026.04.20</time>
+              <span class="news__cat">Update</span>
+              <div class="news__title">ホームページをリニューアルしました。</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel-sub">§07 / Company — <span style="color:var(--hazard)">PROFILE</span></div>
+          <h2 class="panel-title">会社情報<em>.</em></h2>
+          <div class="company">
+            <div class="company__row"><div class="company__label">Name</div><div class="company__value"><b>TeckNova</b>（テックノバ）</div></div>
+            <div class="company__row"><div class="company__label">Founder</div><div class="company__value">斉藤 勇貴</div></div>
+            <div class="company__row"><div class="company__label">Est.</div><div class="company__value">2026年4月</div></div>
+            <div class="company__row"><div class="company__label">Address</div><div class="company__value">東京都渋谷区恵比寿西2-4-8<br>ウィンド恵比寿ビル 8F</div></div>
+            <div class="company__row"><div class="company__label">Services</div><div class="company__value">AI業務自動化・業務システム開発・DX支援</div></div>
+            <div class="company__row"><div class="company__label">Area</div><div class="company__value">全国（オンライン対応）</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="container">
+      <div class="sec__head">
+        <span class="sec__tag">§08 / FAQ</span>
+        <h2 class="sec__title">
+          よくある <em>質問</em>.
+          <span class="jp">Frequently asked</span>
+        </h2>
+      </div>
+
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__q">中小企業でもAIや業務自動化を導入できますか？</summary>
+          <div class="faq__a">はい。スモールスタートから対応しており、大手SIer の <b>1/3〜1/5 のコスト</b> で導入できます。「何を自動化したらいいか分からない」という段階からでも、30分の無料ヒアリングで整理します。</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">費用はどのくらいかかりますか？</summary>
+          <div class="faq__a">ご要望・規模に応じてお見積もりします。初回相談・お見積もりは <b>完全無料</b> です。スモールスタートから大規模対応まで柔軟に対応します。</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">開発の流れを教えてください。</summary>
+          <div class="faq__a">① 無料ヒアリング（30分）→ ② AI改善提案・見積（無料）→ ③ 開発・実装（アジャイル）→ ④ 納品・研修 → ⑤ 保守・継続改善 の 5 ステージです。</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">開発後のサポートはありますか？</summary>
+          <div class="faq__a">はい。月次保守・運用サポートプランをご用意しています。業務改善の成果が出るまで責任を持って伴走します。</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">ChatGPTを社内業務に活用したいがどこに相談すればいいですか？</summary>
+          <div class="faq__a">TeckNova にご相談ください。ChatGPT・Claude・Gemini などの最新 AI を業務システムに組み込み、書類自動生成・問い合わせ自動返信・データ分析レポートの自動化など、具体的な業務課題に合わせたシステムを開発します。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container cta__inner">
+      <h2 class="cta__title">
+        Make<br>
+        <span class="rev">the boring</span><br>
+        parts <em>disappear.</em>
+        <span class="jp">AIで業務を変える、まずは30分から。</span>
+      </h2>
+      <div class="cta__side">
+        費用・期間の見積もりまで完全無料。オンライン30分で、御社に合ったAI活用プランをご提案します。まずは気軽にお声がけください。
+        <div class="cta__btns">
+          <a href="/contact/" class="btn btn--primary">無料相談を申し込む</a>
+          <a href="/service/" class="btn btn--on-dark">サービス詳細</a>
+        </div>
+        <div class="cta__contact">
+          <div>MAIL &nbsp;— &nbsp;<b>y.saito@teck-nova.jp</b></div>
+          <div>WEB  &nbsp;&nbsp;— &nbsp;<b>https://teck-nova.jp</b></div>
+          <div>HQ   &nbsp;&nbsp;&nbsp;— &nbsp;<b>Ebisu-nishi, Shibuya, Tokyo</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="container">
+    <div class="ft__top">
+      <div>
+        <div class="ft__brand">Teck<em>Nova</em>.</div>
+        <div class="ft__tag">// AI × DX Support for SMBs</div>
+        <div class="ft__addr">
           〒150-0021<br>
           東京都渋谷区恵比寿西2丁目4番8号<br>
-          ウィンド恵比寿ビル8F<br>
-          代表者: 斉藤 勇貴
-        </p>
+          ウィンド恵比寿ビル 8F<br>
+          代表: 斉藤 勇貴
+        </div>
       </div>
-      <div class="footer__links">
-        <ul class="footer__nav">
-          <li><a href="#strength">開発体制</a></li>
-          <li><a href="#works">開発事例</a></li>
-          <li><a href="#news">お知らせ</a></li>
-        </ul>
-        <ul class="footer__nav">
-          <li><a href="privacy/">プライバシーポリシー</a></li>
-          <li><a href="contact/">お問い合わせ</a></li>
-        </ul>
+      <div class="ft__cols">
+        <div class="ft__col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/service/ai-automation/">AI業務自動化</a></li>
+            <li><a href="/service/system-dev/">業務システム開発</a></li>
+            <li><a href="/service/dx-consulting/">DX戦略策定</a></li>
+          </ul>
+        </div>
+        <div class="ft__col">
+          <h4>Industry</h4>
+          <ul>
+            <li><a href="/industry/it/">IT・Web業界</a></li>
+            <li><a href="/industry/ec/">EC・ネットショップ</a></li>
+            <li><a href="/industry/real-estate/">不動産</a></li>
+            <li><a href="/industry/professional/">士業</a></li>
+            <li><a href="/industry/clinic/">整骨院・クリニック</a></li>
+          </ul>
+        </div>
+        <div class="ft__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/works/">開発事例</a></li>
+            <li><a href="/about/">会社概要</a></li>
+            <li><a href="/privacy/">プライバシーポリシー</a></li>
+            <li><a href="/contact/">お問い合わせ</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer__copy">
-      <small>&copy; 2024 TeckNova Inc. All Rights Reserved.</small>
+    <div class="ft__bot">
+      <div>© 2026 TeckNova. ALL RIGHTS RESERVED.</div>
+      <div class="ascii">[ EOF ]</div>
+      <div>Est. 2026 — Shibuya, Tokyo — Japan</div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script type="module" src="/main.js"></script>
+<script type="module" src="/main.js"></script>
 </body>
-
 </html>
